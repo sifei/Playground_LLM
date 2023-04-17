@@ -22,5 +22,9 @@ pip uninstall peft -y
 pip install git+https://github.com/huggingface/peft.git@e536616888d51b453ed354a6f1e243fecb02ea08
 ```
 
+Finetune alpac-lora:
+```python finetune.py --base_model='decapoda-research/llama-7b-hf' --data_path='fine-tune-dataset/quora_100k_finetune.json' --output_dir='./quora-lora-alpaca' --batch_size=128 --num_epochs 10```
+
 Running finetune alpaca-lora:
 ```python generate.py --load_8bit --base_model 'decapoda-research/llama-7b-hf' --lora_weights './quora-lora-alpaca/'```
+

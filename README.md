@@ -28,3 +28,6 @@ Finetune alpac-lora:
 Running finetune alpaca-lora:
 ```python generate.py --load_8bit --base_model 'decapoda-research/llama-7b-hf' --lora_weights './quora-lora-alpaca/'```
 
+
+Command on HPC:
+```srun -p gpuq --mem=200G --gres=gpu:a100:4 --pty bash```

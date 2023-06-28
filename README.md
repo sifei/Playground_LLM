@@ -35,5 +35,12 @@ Command on HPC:
 ```srun -p gpuq --mem=200G --gres=gpu:a100:4 --pty bash```
 
 adapter_model.bin not being updated issue:
-```pip uninstall peft -y
-pip install git+https://github.com/huggingface/peft.git@e536616888d51b453ed354a6f1e243fecb02ea08```
+```
+pip uninstall peft -y
+pip install git+https://github.com/huggingface/peft.git@e536616888d51b453ed354a6f1e243fecb02ea08
+```
+```
+pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install accelerate==0.19.0 
+pip install bitsandbytes==0.37.2
+```

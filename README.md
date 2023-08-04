@@ -44,3 +44,7 @@ pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --extra-index-url https
 pip install accelerate==0.19.0 
 pip install bitsandbytes==0.37.2
 ```
+
+```
+torchrun --nproc_per_node=4 --nnodes=2 --node_rank=1 --rdzv_id=456 --rdzv_backend=c10d --rdzv_endpoint=g-10-11 example_5shot.py --ckpt_dir /mnt/isilon/tsui_lab/LLM/LLAMA_MODEL/65B/65B/ --tokenizer_path /mnt/isilon/tsui_lab/LLM/LLAMA_MODEL/65B/tokenizer.model --filename /home/hans2/Quora/Quora_test_10.csv --ofilename Quora_test_10_5shot_65B.csv
+```
